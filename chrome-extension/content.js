@@ -29,7 +29,6 @@ class CiscoQuestionsOverlay {
         this.overlay.innerHTML = `
             <div class="cisco-overlay-container">
                 <div class="cisco-overlay-header">
-                    <h1 class="cisco-overlay-title">Cisco Questions Search</h1>
                     <button class="cisco-overlay-close" id="cisco-close-btn">×</button>
                 </div>
 

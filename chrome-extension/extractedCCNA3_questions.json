@@ -370,19 +370,25 @@
             "cable",
             "digital subscriber line",
             "Ethernet WAN",
-            "municipal Wi-Fi",
-            "Private WAN infrastructure\n\u2013 such as dedicated point-to-point leased lines, PSTN, ISDN, Ethernet WAN, ATM, or Frame Relay",
-            "Public WAN infrastructure\n\u2013 such as digital subscriber line (DSL), cable, satellite access, municipal Wi-Fi, WiMAX, or wireless cellular including 3G/4G",
+            "municipal Wi-Fi"
+        ],
+        "correct_answers": [
+            "leased line",
+            "Ethernet WAN"
+        ],
+        "type": "multiple_choice",
+        "explanation": "Explanation:\nThe class of service (CoS) marking allows a Layer 2 Ethernet frame to be marked with eight levels of priority (values 0\u20137). This marking can be used by QoS-enabled network devices to provide preferential traffic treatment."
+    },
+    {
+        "question_number": "25",
+        "question_text": "25. Which type of QoS marking is applied to Ethernet frames?",
+        "options": [
             "IP precedence",
             "DSCP",
             "ToS",
             "CoS"
         ],
         "correct_answers": [
-            "leased line",
-            "Ethernet WAN",
-            "Private WAN infrastructure\n\u2013 such as dedicated point-to-point leased lines, PSTN, ISDN, Ethernet WAN, ATM, or Frame Relay",
-            "Public WAN infrastructure\n\u2013 such as digital subscriber line (DSL), cable, satellite access, municipal Wi-Fi, WiMAX, or wireless cellular including 3G/4G",
             "CoS"
         ],
         "type": "multiple_choice",
@@ -920,18 +926,12 @@
             "API server",
             "format",
             "key",
-            "parameters",
-            "Format\n\u2013 JSON, YAML, XML, and other supported data format",
-            "Key\n\u2013 for authentication of the requesting source",
-            "Parameters\n\u2013 used to send information pertaining to the query request"
+            "parameters"
         ],
         "correct_answers": [
             "format",
             "key",
-            "parameters",
-            "Format\n\u2013 JSON, YAML, XML, and other supported data format",
-            "Key\n\u2013 for authentication of the requesting source",
-            "Parameters\n\u2013 used to send information pertaining to the query request"
+            "parameters"
         ],
         "type": "multiple_choice",
         "explanation": "Explanation:\nThe query portion in a RESTful API request specifies the data format and information the client is requesting from the API service. Queries can include the following:\nFormat\n\u2013 JSON, YAML, XML, and other supported data format\nKey\n\u2013 for authentication of the requesting source\nParameters\n\u2013 used to send information pertaining to the query request"
@@ -1202,16 +1202,10 @@
             "XML",
             "YAML",
             "HTML",
-            "JSON",
-            "JavaScript Object Notation (JSON)\n\u2013 In JSON, the data known as an object is one or more key/value pairs enclosed in braces { }. Keys must be strings within double quotation marks \u201d \u201c. Keys and values are separated by a colon.",
-            "eXtensible Markup Language (XML)\n\u2013 In XML, the data is enclosed within a related set of tags <tag>data</tag>.",
-            "YAML Ain\u2019t Markup Language (YAML)\n\u2013 In YAML, the data known as an object is one or more key value pairs. Key value pairs are separated by a colon without the use of quotation marks. YAML uses indentation to define its structure, without the use of brackets or commas."
+            "JSON"
         ],
         "correct_answers": [
-            "JSON",
-            "JavaScript Object Notation (JSON)\n\u2013 In JSON, the data known as an object is one or more key/value pairs enclosed in braces { }. Keys must be strings within double quotation marks \u201d \u201c. Keys and values are separated by a colon.",
-            "eXtensible Markup Language (XML)\n\u2013 In XML, the data is enclosed within a related set of tags <tag>data</tag>.",
-            "YAML Ain\u2019t Markup Language (YAML)\n\u2013 In YAML, the data known as an object is one or more key value pairs. Key value pairs are separated by a colon without the use of quotation marks. YAML uses indentation to define its structure, without the use of brackets or commas."
+            "JSON"
         ],
         "type": "multiple_choice",
         "explanation": "N/A"
@@ -1335,7 +1329,6 @@
             "All TCP and UDP packets will be denied.\u200b"
         ],
         "correct_answers": [
-            "Which two conclusions can be drawn from this new configuration?\u200b (Choose two.)",
             "Ping packets will be permitted.",
             "SSH packets will be permitted."
         ],
@@ -1471,9 +1464,7 @@
             "Router R4 will become the DR and router R3 will become the BDR.",
             "Router R1 will become the DR and router R2 will become the BDR.",
             "Router R3 will become the DR and router R2 will become the BDR.",
-            "highest pritority from 1 -255 (0 = never a DR)",
-            "highest router ID",
-            "highest IP address of a loopback or active interface in the absence of a manually configured router ID. Loopback IP addresses take higher precedence than other interfaces.",
+            "Case 2:",
             "Router R2 will become the DR and router R4 will become the BDR.",
             "Router R1 will become the DR and router R3 will become the BDR.",
             "Router R4 will become the DR and router R3 will become the BDR.",
@@ -1481,6 +1472,7 @@
         ],
         "correct_answers": [
             "Router R3 will become the DR and router R1 will become the BDR.",
+            "Case2:",
             "Router R1 will become the DR and router R3 will become the BDR."
         ],
         "type": "multiple_choice",
@@ -1680,7 +1672,7 @@
             "supply of consistent air flow",
             "support of live migration",
             "guarantee of power",
-            "Explanation:\nLive migration allows moving of one virtual server to another virtual server that could be in a different location that is some distance from the original data center.\nCase 2:",
+            "Case 2:",
             "Less energy is consumed.",
             "Server provisioning is faster.",
             "Hardware at the recovery site does not have to be identical to production equipment.",
@@ -1688,7 +1680,7 @@
         ],
         "correct_answers": [
             "support of live migration",
-            "Explanation:\nLive migration allows moving of one virtual server to another virtual server that could be in a different location that is some distance from the original data center.\nCase 2:",
+            "Case 2:",
             "Hardware at the recovery site does not have to be identical to production equipment."
         ],
         "type": "multiple_choice",
@@ -3041,18 +3033,26 @@
             "distance between sites",
             "reliability",
             "security needs",
-            "type of traffic",
-            "Explanation:\nThe traffic-related factors that influence selecting a particular WAN link type include the type of traffic, amount of traffic, quality requirements, and security requirements. Quality requirements include ensuring that traffic that cannot tolerate delay gets priority treatment as well as important business transactional traffic.\n197. What command would be used as part of configuring NAT or PAT to link the inside local addresses to the pool of addresses available for PAT translation?",
+            "type of traffic"
+        ],
+        "correct_answers": [
+            "amount of traffic",
+            "security needs",
+            "type of traffic"
+        ],
+        "type": "multiple_choice",
+        "explanation": "N/A"
+    },
+    {
+        "question_number": "197",
+        "question_text": "197. What command would be used as part of configuring NAT or PAT to link the inside local addresses to the pool of addresses available for PAT translation?",
+        "options": [
             "ip nat inside source list ACCTNG pool POOL-STAT",
             "ip nat translation timeout 36000",
             "ip nat inside source list 14 pool POOL-STAT overload",
             "ip nat inside source static 172.19.89.13 198.133.219.65"
         ],
         "correct_answers": [
-            "amount of traffic",
-            "security needs",
-            "type of traffic",
-            "Explanation:\nThe traffic-related factors that influence selecting a particular WAN link type include the type of traffic, amount of traffic, quality requirements, and security requirements. Quality requirements include ensuring that traffic that cannot tolerate delay gets priority treatment as well as important business transactional traffic.\n197. What command would be used as part of configuring NAT or PAT to link the inside local addresses to the pool of addresses available for PAT translation?",
             "ip nat inside source list 14 pool POOL-STAT overload"
         ],
         "type": "multiple_choice",
@@ -3225,26 +3225,45 @@
             "data center",
             "virtualization",
             "cloud services",
-            "dedicated servers",
-            "210. Which QoS technique smooths packet output rate?",
+            "dedicated servers"
+        ],
+        "correct_answers": [
+            "cloud services"
+        ],
+        "type": "multiple_choice",
+        "explanation": "Explanation:\nStandard ACLs permit or deny packets based only on the source IPv4 address. Because all traffic types are permitted or denied, standard ACLs should be located as close to the destination as possible.\nExtended ACLs permit or deny packets based on the source IPv4 address and destination IPv4 address, protocol type, source and destination TCP or UDP ports and more. Because the filtering of extended ACLs is so specific, extended ACLs should be located as close as possible to the source of the traffic to be filtered. Undesirable traffic is denied close to the source network without crossing the network infrastructure."
+    },
+    {
+        "question_number": "210",
+        "question_text": "210. Which QoS technique smooths packet output rate?",
+        "options": [
             "policing",
             "shaping",
             "weighted random early detection",
             "Integrated Services (IntServ)",
-            "marking",
-            "211. Refer to the exhibit. The company has provided IP phones to employees on the 192.168.10.0/24 network and the voice traffic will need priority over data traffic. What is the best ACL type and placement to use in this situation?",
+            "marking"
+        ],
+        "correct_answers": [
+            "shaping"
+
+        ],
+        "type": "multiple_choice",
+        "explanation": "N/A"
+    },
+    {
+        "question_number": "211",
+        "question_text": "211. Refer to the exhibit. The company has provided IP phones to employees on the 192.168.10.0/24 network and the voice traffic will need priority over data traffic. What is the best ACL type and placement to use in this situation?",
+        "options": [
             "extended ACL inbound on R1 G0/0",
             "extended ACL outbound on R2 WAN interface towards the internet",
             "extended ACL outbound on R2 S0/0/1",
             "extended ACLs inbound on R1 G0/0 and G0/1"
         ],
         "correct_answers": [
-            "cloud services",
-            "shaping",
-            "extended ACL inbound on R1 G0/0"
+             "extended ACL inbound on R1 G0/0"
         ],
         "type": "multiple_choice",
-        "explanation": "Explanation:\nStandard ACLs permit or deny packets based only on the source IPv4 address. Because all traffic types are permitted or denied, standard ACLs should be located as close to the destination as possible.\nExtended ACLs permit or deny packets based on the source IPv4 address and destination IPv4 address, protocol type, source and destination TCP or UDP ports and more. Because the filtering of extended ACLs is so specific, extended ACLs should be located as close as possible to the source of the traffic to be filtered. Undesirable traffic is denied close to the source network without crossing the network infrastructure."
+        "explanation": "N/A"
     },
     {
         "question_number": "212",
@@ -3257,26 +3276,6 @@
         ],
         "correct_answers": [
             "authenticates a packet by using either the HMAC with MD5 method or the SHA method"
-        ],
-        "type": "multiple_choice",
-        "explanation": "N/A"
-    },
-    {
-        "question_number": "203",
-        "question_text": "203. Refer to the exhibit. A network administrator has configured a standard ACL to permit only the two LAN networks attached to R1 to access the network that connects to R2 G0/1 interface. When following the best practices, in what location should the standard ACL be applied? \u2013 ANSWER NOT CORRECT!!!",
-        "options": [],
-        "correct_answers": [],
-        "type": "multiple_choice",
-        "explanation": "N/A"
-    },
-    {
-        "question_number": "104",
-        "question_text": "104. Refer to the exhibit. Which sequence of commands should be used to configure router A for OSPF?",
-        "options": [
-            "router ospf 1\nnetwork 192.168.10.0 area 0\nrouter ospf 1\nnetwork 192.168.10.0\nrouter ospf 1\nnetwork 192.168.10.64 255.255.255.192\nnetwork 192.168.10.192 255.255.255.252\nrouter ospf 1\nnetwork 192.168.10.64 0.0.0.63 area 0\nnetwork 192.168.10.192 0.0.0.3 area 0"
-        ],
-        "correct_answers": [
-            "router ospf 1\nnetwork 192.168.10.0 area 0\nrouter ospf 1\nnetwork 192.168.10.0\nrouter ospf 1\nnetwork 192.168.10.64 255.255.255.192\nnetwork 192.168.10.192 255.255.255.252\nrouter ospf 1\nnetwork 192.168.10.64 0.0.0.63 area 0\nnetwork 192.168.10.192 0.0.0.3 area 0"
         ],
         "type": "multiple_choice",
         "explanation": "N/A"

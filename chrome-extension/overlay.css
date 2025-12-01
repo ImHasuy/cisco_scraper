@@ -7,8 +7,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.02);
-    backdrop-filter: blur(1px);
+    background: rgba(0, 0, 0, 0.0002);
     z-index: 999999;
     display: none;
     justify-content: center;
@@ -35,8 +34,8 @@
 
 /* Main search container with ultra-subtle glass effect */
 .cisco-overlay-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.002);
+    backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     box-shadow:

@@ -44,7 +44,7 @@ class CiscoQuestionsSearch {
 
         try {
             // Try to load from extension resources first
-            const response = await fetch(chrome.runtime.getURL('extracted_questions.json'));
+            const response = await fetch(chrome.runtime.getURL('extractedCCNA3_questions.json'));
             if (!response.ok) {
                 throw new Error('Failed to load questions from extension');
             }
@@ -55,7 +55,7 @@ class CiscoQuestionsSearch {
 
             this.hideLoading();
             this.updateResultsCount();
-            this.displayQuestions(this.filteredQuestions.slice(0, 10)); // Show first 10 initially
+            this.displayQuestions(this.filteredQuestions.slice(0, 1)); // Show first initially
 
         } catch (error) {
             console.error('Error loading questions:', error);
@@ -163,9 +163,7 @@ class CiscoQuestionsSearch {
                 <div class="question-number">Question ${questionNumber}</div>
                 <div class="question-type">${questionType}</div>
                 <div class="question-text">${questionText}</div>
-                ${optionsHTML}
                 ${correctAnswersHTML}
-                ${explanationHTML}
             </div>
         `;
     }

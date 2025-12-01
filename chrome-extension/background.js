@@ -22,7 +22,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'get-questions') {
     // Load questions from the extension's resources
-    fetch(chrome.runtime.getURL('extracted_questions.json'))
+    fetch(chrome.runtime.getURL('extractedCCNA3_questions.json'))
       .then(response => response.json())
       .then(data => {
         sendResponse({ questions: data });

@@ -28,7 +28,6 @@ class CiscoQuestionsOverlay {
 
         this.overlay.innerHTML = `
             <div class="cisco-overlay-container">
-                <div class="cisco-keyboard-hint">Press Ctrl+Shift+Q to toggle</div>
                 <div class="cisco-overlay-header">
                     <h1 class="cisco-overlay-title">Cisco Questions Search</h1>
                     <button class="cisco-overlay-close" id="cisco-close-btn">×</button>
@@ -122,7 +121,7 @@ class CiscoQuestionsOverlay {
             }
 
             // Ctrl+Shift+Q or Cmd+Shift+Q to toggle
-            if (e.key === 'Q' && (e.ctrlKey || e.metaKey) && e.shiftKey) {
+            if (e.key === 'Q' && (e.ctrlKey || e.metaKey)) {
                 e.preventDefault();
                 this.toggleOverlay();
             }
@@ -159,15 +158,30 @@ class CiscoQuestionsOverlay {
         }
     }
 
-    showOverlay() {
+showOverlay() {
+        // 1. Megnézzük, van-e kijelölve szöveg az oldalon
+        const selectedText = window.getSelection().toString().trim();
+
         this.isVisible = true;
         this.overlay.classList.add('show');
         document.body.classList.add('cisco-overlay-active');
 
-        // Focus search input after animation
+        // 2. Ha van kijelölés, beírjuk a keresőbe és keresünk
+        if (selectedText) {
+            this.searchInput.value = selectedText;
+            this.performSearch(selectedText); // Azonnal elindítja a keresést
+        }
+
+        // 3. Fókuszálás az input mezőre
         setTimeout(() => {
             this.searchInput.focus();
-        }, 200);
+
+            // Extra kényelem: Ha volt szöveg, jelöljük ki a mezőben is.
+            // Így ha mégsem arra akartál keresni, egy gombnyomással felülírhatod.
+            if (selectedText) {
+                this.searchInput.select();
+            }
+        }, 100); // 200ms helyett 100ms általában elég és gyorsabbnak érződik
     }
 
     hideOverlay() {
@@ -277,9 +291,7 @@ class CiscoQuestionsOverlay {
                 <div class="cisco-question-number">Question ${questionNumber}</div>
                 <div class="cisco-question-type">${questionType}</div>
                 <div class="cisco-question-text">${questionText}</div>
-                ${optionsHTML}
                 ${correctAnswersHTML}
-                ${explanationHTML}
             </div>
         `;
     }

@@ -7,8 +7,8 @@
   "commands": {
     "toggle-overlay": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Q",
-        "mac": "Command+Shift+Q"
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
       },
       "description": "Toggle Cisco questions search overlay"
     }

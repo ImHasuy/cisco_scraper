@@ -187,6 +187,10 @@ showOverlay() {
         this.isVisible = false;
         this.overlay.classList.remove('show');
         document.body.classList.remove('cisco-overlay-active');
+        
+        if (this.searchInput) {
+            this.searchInput.value = '';
+        }
     }
 
     performSearch(query) {
